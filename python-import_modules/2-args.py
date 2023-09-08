@@ -13,6 +13,6 @@ def print_arguments(argv):
     else:
         print("0 arguments.")
         print(".")
-if __name__ == "__main__":
-    import sys
-    print_arguments(sys.argv[1:])
+    if __name__ == "__main__":
+        import sys
+        print_arguments(sys.argv[1:])
