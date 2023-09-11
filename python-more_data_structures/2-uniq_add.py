@@ -4,6 +4,7 @@ def uniq_add(my_list=[]):
     sum = 0
     for num in my_list:
         if num not in uniq_int:
+            uniq_int.add(num)
             sum += num
 
     return (sum)
