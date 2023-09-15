@@ -28,7 +28,10 @@ class Square:
     def area(self):
         """ This will print the area of the Square """
         return (self.__size ** 2)
+
+
 def my_print(self):
+    """ This prints the shape of Square """
     if self.__size == 0:
         print()
     else:
