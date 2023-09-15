@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# 0-sqaure.py
+# 1-sqaure.py
 # Tiffany Walker
 """Defining a class for a Square."""
 
