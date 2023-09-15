@@ -30,10 +30,10 @@ class Square:
         return (self.__size ** 2)
 
 
-def my_print(self):
-    """ This prints the shape of Square """
-    if self.__size == 0:
-        print()
-    else:
-        for i in range(self.__size):
-            print("#" * self.__size)
+    def my_print(self):
+        """ This prints the shape of Square """
+        if self.__size == 0:
+            print()
+        else:
+            for i in range(self.__size):
+                print("#" * self.__size)
