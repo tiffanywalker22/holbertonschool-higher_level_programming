@@ -17,6 +17,7 @@ def text_indentation(text):
 
         if chr in punc_chrs:
             print(line.strip())
+            print("")
             line = ""
     if line:
         print(line.strip())
