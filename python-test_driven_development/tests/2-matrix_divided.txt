@@ -1,0 +1,19 @@
+# 2-matrix_divided.txt
+# Tiffany Walker
+
+===============================
+Test cases for 2-matrix_divided.py
+===============================
+
+Import matrix_divided to doctest
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Testing correct inputs
+==============================
+
+
+Testing incorrect inputs
+==============================
+
+Testing function for no input
+>>>matrix_divided()
