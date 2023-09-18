@@ -19,8 +19,22 @@ Testing a 2x2 matrix where elements are divided by 5
 >>> matrix_divided([[10, 5], [20, 10]], 5)
 [[2.0, 1.0], [4.0, 2.0]]
 
+Testing a 2x2 matrix of ints by dividing float(inf)
+>>> matrix_divided([[4, 2], [8, 4]], float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
+
 Testing incorrect inputs
 ==============================
+
+Testing matrix with rows of different size and div is int
+>>> matrix_divided([[1, 2, 3], [4, 5], [6, 7, 8]], 2)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+Testing function with not list and int div
+>>> matrix_divided("invalid", 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Testing for divide zero
 >>> matrix_divided([[0, 1], [2, 3]], 0)
