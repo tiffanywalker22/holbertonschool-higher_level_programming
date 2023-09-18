@@ -19,6 +19,10 @@ Testing function with negative numbers
 >>> add_integer(-5, 10)
 5
 
+Testing function with only one argument
+>>> add_integer(2)
+100
+
 Testing incorrect inputs
 ==============================
 
@@ -46,3 +50,8 @@ Testing function for missing arguments
 >>> add_integer()
 Traceback (most recent call last):
 TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Testing function for none
+>>> add_integer(None, 2)
+Traceback (most recent call last):
+TypeError: a must be an integer
