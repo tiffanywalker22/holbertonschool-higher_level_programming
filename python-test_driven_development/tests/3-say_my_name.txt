@@ -12,3 +12,15 @@ My name is Tiffany Walker
 Testing upper case names
 >>> say_my_name("TIFFANY", "WALKER")
 My name is TIFFANY WALKER
+
+Testing integer as an input for first name
+>>>say_my_name(123, "Walker")
+TypeError: first_name must be a string
+
+Testing integer as an input for last name
+>>>say_my_name("Tiffany", 123)
+TypeError: last_name must be a string
+
+Testing an integer as an input for first and last name
+>>>say_my_name(123, 456)
+TypeError: first_name must be a string
