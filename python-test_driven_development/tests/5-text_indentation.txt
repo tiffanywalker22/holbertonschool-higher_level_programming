@@ -1,0 +1,29 @@
+# 5-text_indentation.txt
+# Tiffany Walker
+
+===============================
+Test cases for 5-text_indentation.py
+===============================
+
+Import text_indentation to doctest
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Testing correct inputs
+==============================
+Testing function with '.'
+>>> text_indentation("Hello. I'm Tiffany")
+Hello.
+I'm Tiffany
+
+Testing function with '?'
+>>> text_indentation("How are you? I'm good")
+How are you?
+I'm good
+
+Testing function with ':'
+>>> text_indentation("Cats: the best thing ever")
+Cats:
+the best thing ever
+
+Testing incorrect inputs
+==============================
