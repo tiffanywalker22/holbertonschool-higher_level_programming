@@ -1,16 +1,18 @@
 #!/usr/bin/python3
 # 5-text_indentation.py
 # Tiffany Walker
-""" This function prints text with 2 new lines after each of these 
+""" This function prints text with 2 new lines after each of these
     characters ., /, and : """
 
 
 def text_indentation(text):
     """This function prints a text with 2 new lines
-    after each of these characters: ., ? and :. This function only handles strings """
+    after each of these characters: ., ? and :.
+    This function only handles strings """
+
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    
+
     punc_chrs = ['.', '?', ':']
 
     line = ""
@@ -22,4 +24,4 @@ def text_indentation(text):
             print("")
             line = ""
     if line:
-        print(line.strip(), end= "")
+        print(line.strip(), end="")
