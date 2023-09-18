@@ -5,6 +5,9 @@
 Test cases for 3-say_my_name.py
 ===============================
 
+Import say_my_name to doctest
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
 Testing correct outputs
 ==============================
 
@@ -20,14 +23,17 @@ Testing incorrect outputs
 ==============================
 
 Testing integer as an input for first name
->>>say_my_name(123, "Walker")
+>>> say_my_name(123, "Walker")
+Traceback (most recent call last):
 TypeError: first_name must be a string
 
 Testing integer as an input for last name
->>>say_my_name("Tiffany", 123)
+>>> say_my_name("Tiffany", 123)
+Traceback (most recent call last):
 TypeError: last_name must be a string
 
 Testing an integer as an input for first and last name
->>>say_my_name(123, 456)
+>>> say_my_name(123, 456)
+Traceback (most recent call last):
 TypeError: first_name must be a string
 
