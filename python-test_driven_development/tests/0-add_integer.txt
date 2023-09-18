@@ -8,6 +8,41 @@ Test cases for 0-add_integer.py
 Import add_integer to doctest
 >>> add_integer = __import__('0-add_integer').add_integer
 
+Testing correct inputs
+==============================
+
 This test case checks that function can add two ints
     >>> add_integer(1, 2)
     3
+
+Testing function with negative numbers
+>>> add_integer(-5, 10)
+5
+
+Testing incorrect inputs
+==============================
+
+Testing function for type validation of non-int
+>>> add_integer("hi", 5)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+Testing function for type validation for both inputs
+>>> add_integer("hello", "world")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+Testing function for float NaN
+>>> add_integer(float('nan'), 5)
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+
+Testing fucntion for float overflow
+>>> add_integer(float('inf'), 4)
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+Testing function for missing arguments
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
