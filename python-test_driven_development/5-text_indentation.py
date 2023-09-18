@@ -6,7 +6,8 @@
 
 
 def text_indentation(text):
-    """ """
+    """This function prints a text with 2 new lines
+    after each of these characters: ., ? and :. This function only handles strings """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     
