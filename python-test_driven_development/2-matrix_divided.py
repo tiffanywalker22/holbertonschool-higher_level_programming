@@ -4,6 +4,7 @@
 """ This function divides a matrix """
 
 def matrix_divided(matrix, div):
+    """ This function divides all elements of a matrix """
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     if not all(isinstance(row, list) for row in matrix):
@@ -16,3 +17,9 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
     
+    new_matrix = []
+    for row in matrix:
+        new_row = [round(x / div, 2) for x in row]
+        new_matrix.append(new_row)
+
+    return new_matrix

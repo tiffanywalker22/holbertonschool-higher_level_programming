@@ -11,9 +11,23 @@ Import matrix_divided to doctest
 Testing correct inputs
 ==============================
 
+Testing a 2x2 matrix where elements are divided by 2
+>>> matrix_divided([[4, 2],[8, 4]], 2)
+[[2.0, 1.0], [4.0, 2.0]]
+
+Testing a 2x2 matrix where elements are divided by 5
+>>> matrix_divided([[10, 5], [20, 10]], 5)
+[[2.0, 1.0], [4.0, 2.0]]
 
 Testing incorrect inputs
 ==============================
 
-Testing function for no input
->>>matrix_divided()
+Testing for divide zero
+>>> matrix_divided([[0, 1], [2, 3]], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+Testing for no input
+>>> matrix_divided()
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
