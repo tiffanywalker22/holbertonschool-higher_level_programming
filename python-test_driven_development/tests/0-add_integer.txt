@@ -5,6 +5,9 @@
 Test cases for 0-add_integer.py
 ===============================
 
+Import add_integer to doctest
+>>> add_integer = __import__('0-add_integer').add_integer
+
 This test case checks that function can add two ints
     >>> add_integer(1, 2)
     3

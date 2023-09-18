@@ -5,20 +5,23 @@
 Test cases for 4-print_square.py
 ===============================
 
+Import print_square to doctest
+>>> print_square = __import__('4-print_square').print_square
+
 Testing function to print a 2x2 square
->>>print_square(2)
+>>> print_square(2)
 ##
 ##
 
 Testing function to print a 4x4 square
->>>print_square(4)
+>>> print_square(4)
 ####
 ####
 ####
 ####
 
 Testing function to print 6x6 square
->>>print_square(6)
+>>> print_square(6)
 ######
 ######
 ######
@@ -27,4 +30,4 @@ Testing function to print 6x6 square
 ######
 
 Testing function to print 0
->>>print_square(0)
+>>> print_square(0)
