@@ -1,0 +1,14 @@
+# 0-add_integer.txt
+# Tiffany Walker
+
+===============================
+Test cases for 3-say_my_name.py
+===============================
+
+Testing for first and last name
+>>> say_my_name("Tiffany", "Walker")
+My name is Tiffany Walker
+
+Testing upper case names
+>>> say_my_name("TIFFANY", "WALKER")
+My name is TIFFANY WALKER
