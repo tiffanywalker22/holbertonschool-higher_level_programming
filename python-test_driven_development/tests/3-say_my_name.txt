@@ -8,7 +8,7 @@ Test cases for 3-say_my_name.py
 Import say_my_name to doctest
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
-Testing correct outputs
+Testing correct inputs
 ==============================
 
 Testing for first and last name
@@ -19,7 +19,7 @@ Testing upper case names
 >>> say_my_name("TIFFANY", "WALKER")
 My name is TIFFANY WALKER
 
-Testing incorrect outputs
+Testing incorrect inputs
 ==============================
 
 Testing integer as an input for first name

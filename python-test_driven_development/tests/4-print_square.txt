@@ -8,6 +8,9 @@ Test cases for 4-print_square.py
 Import print_square to doctest
 >>> print_square = __import__('4-print_square').print_square
 
+Testing correct inputs
+==============================
+
 Testing function to print a 2x2 square
 >>> print_square(2)
 ##
@@ -31,3 +34,21 @@ Testing function to print 6x6 square
 
 Testing function to print 0
 >>> print_square(0)
+
+Testing incorrect inputs
+==============================
+
+Testing function for missing argument
+>>> print_square()
+Traceback (most recent call last):
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+Testing function for value less than 0
+>>> print_square(-5)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+Testing function for size is not integer
+>>> print_square("invalid")
+Traceback (most recent call last):
+TypeError: size must be an integer
