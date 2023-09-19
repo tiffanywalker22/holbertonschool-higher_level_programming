@@ -5,6 +5,7 @@
 
 
 def print_square(size):
+    """ This function should be able to print a square """
     if not isinstance(size, int):
         raise TypeError("size must be an integer")
 
