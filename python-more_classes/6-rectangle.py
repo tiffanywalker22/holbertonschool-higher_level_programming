@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# 5-rectangle.py
+# 6-rectangle.py
 # Tiffany Walker
 """ Creating an empty class for Rectangle  """
 
