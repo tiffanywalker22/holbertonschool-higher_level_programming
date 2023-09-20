@@ -14,10 +14,10 @@ def matrix_divided(matrix, div):
         raise TypeError("Each row of the matrix must have the same size")
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
-    
+
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    
+
     new_matrix = []
     for row in matrix:
         new_row = [round(x / div, 2) for x in row]
