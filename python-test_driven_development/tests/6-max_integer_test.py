@@ -20,3 +20,6 @@ def test_mixed_integer(self):
 
 def test_large_list(self):
     self.assertEqual(max_integer(list(range(1, 10001))), 10000)
+
+if __name__ == '__main__':
+    unittest.main()
