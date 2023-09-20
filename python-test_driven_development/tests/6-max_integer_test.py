@@ -14,6 +14,8 @@ def test_max_integer(self):
     self.assertEqual(max_integer([2]), 2)
     self.assertEqual(max_integer([-2]), -2)
     self.assertEqual(max_integer([]), 2)
+    self.assertEqual(max_integer([2]), -2)
+    self.assertEqual(max_integer([]), None)
 
 def test_mixed_integer(self):
     self.assertEqual(max_integer(-1, 2, -3, 4) -5)
