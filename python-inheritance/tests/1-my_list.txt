@@ -17,5 +17,22 @@ Test empty my_list
 >>> print(my_list)
 []
 
+Test sorting a sorted list
+>>> my_list = MyList([1, 2, 3, 4, 5])
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+Test sorting a list in reverse
+>>> my_list = MyList([5, 4, 3, 2, 1])
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+Test sorting list with duplicates
+>>> my_list = MyList([3, 2, 2, 4, 1, 5, 3])
+>>> my_list.print_sorted()
+[1, 2, 2, 3, 3, 4, 5]
+
 Testing incorrect inputs
 ==============================
+
+
