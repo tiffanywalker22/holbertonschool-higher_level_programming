@@ -6,6 +6,6 @@
 
 class BaseGeometry:
     """ The empty class """
-    
+
     def area(self):
         raise Exception("area() is not implemented")
