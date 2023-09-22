@@ -1,0 +1,21 @@
+# 1-my_list.txt
+# Tiffany Walker
+
+
+===============================
+Test cases for 1-my_list.py
+===============================
+
+Import my_list to doctest
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+
+Testing correct inputs
+==============================
+
+Test empty my_list
+>>> print(my_list)
+[]
+
+Testing incorrect inputs
+==============================
