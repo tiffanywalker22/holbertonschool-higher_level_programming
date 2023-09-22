@@ -6,6 +6,6 @@ or indirectly """
 
 
 def inherits_from(obj, a_class):
-    """ Checks if object is inherited directly or 
+    """ Checks if object is inherited directly or
     indirectly from class """
-    return isinstance(obj, a_class)
+    return isinstance(type(obj), a_class)
