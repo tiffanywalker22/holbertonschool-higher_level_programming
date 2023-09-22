@@ -8,4 +8,4 @@ or indirectly """
 def inherits_from(obj, a_class):
     """ Checks if object is inherited directly or
     indirectly from class """
-    return isinstance(type(obj), a_class)
+    return issubclass(type(obj), a_class)
