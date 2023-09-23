@@ -16,6 +16,11 @@ Testing correct inputs
 Testing with valid input
 >>> base_geometry.integer_validator("length", 2)
 
+Testing with another valid input
+>>> base_geometry.integer_validator("width", 5)
+
+Testing with large value
+>>> base_geometry.integer_validator("width", 1000)
 
 Testing incorrect inputs
 ==============================
@@ -27,5 +32,15 @@ TypeError: length must be an integer
 
 Testing with negative input
 >>> base_geometry.integer_validator("length", -2)
+Traceback (most recent call last):
+ValueError: length must be greater than 0
+
+Testing a float
+>>> base_geometry.integer_validator("length", 2.5)
+Traceback (most recent call last):
+TypeError: length must be an integer
+
+Testing zero value
+>>> base_geometry.integer_validator("length", 0)
 Traceback (most recent call last):
 ValueError: length must be greater than 0
