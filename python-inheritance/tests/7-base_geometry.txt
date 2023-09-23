@@ -1,0 +1,31 @@
+# 7-base_geometry.txt
+# Tiffany Walker
+
+
+===============================
+Test cases for 7-base_geometry.py
+===============================
+
+Import my_list to doctest
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> base_geometry = BaseGeometry()
+
+Testing correct inputs
+==============================
+
+Testing with valid input
+>>> base_geometry.integer_validator("length", 2)
+
+
+Testing incorrect inputs
+==============================
+
+Testing with non-int input
+>>> base_geometry.integer_validator("length", "invalid")
+Traceback (most recent call last):
+TypeError: length must be an integer
+
+Testing with negative input
+>>> base_geometry.integer_validator("length", -2)
+Traceback (most recent call last):
+ValueError: length must be greater than 0
