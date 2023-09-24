@@ -44,3 +44,8 @@ Testing zero value
 >>> base_geometry.integer_validator("length", 0)
 Traceback (most recent call last):
 ValueError: length must be greater than 0
+
+Testing no input 
+>>> base_geometry.integer_validator(None)
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
