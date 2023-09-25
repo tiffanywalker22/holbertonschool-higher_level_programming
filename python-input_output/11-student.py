@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# 10-student.py
+# 11-student.py
 # Tiffany Walker
 """ function creates class student """
 
@@ -23,7 +23,7 @@ class Student:
                 for attr in attrs if hasattr(self, attr)
             }
             return result
-        
+
     def reload_from_json(self, json):
         """ replace attributes of student from json """
         for key, value in json.items():
