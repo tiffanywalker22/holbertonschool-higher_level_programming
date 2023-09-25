@@ -22,4 +22,5 @@ def add_items_to_json():
     save(items, 'add_item.json')
 
 if __name__ == "__main__":
+    """ check if run in main. if yes, execute code """
     add_items_to_json()
