@@ -61,3 +61,8 @@ def test_invalid_y_value(self):
     """ test for invalid x value """
     with self.assertRaises(ValueError):
         rect = Rectangle(5, 10, 15, 0, 1)
+
+def test_area(self):
+    """ tests the area of rectangle """
+    rect = Rectangle(2, 10)
+    self.assertEqual(rect.area(), 20)
