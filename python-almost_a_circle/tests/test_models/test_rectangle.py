@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-# test_base.py
+# test_rectangle.py
 # Tiffany Walker
 
 import unittest
 from models.rectangle import Rectangle
 from models.base import Base
 
-class TestBase(unittest.TestCase):
+class TestRectangle(unittest.TestCase):
     """ unit tests for rectangle """
 
 def testing_no_args(self):
@@ -73,4 +73,3 @@ def test_str(self):
     rect = Rectangle(5, 10, 15, 20, 1)
     expected_str = "[Rectangle] (1) 15/20 - 5/10"
     self.assertEqual(str(rect), expected_str)
-
