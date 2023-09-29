@@ -4,6 +4,7 @@
 
 import unittest
 from models.rectangle import Rectangle
+from models.base import Base
 
 class TestBase(unittest.TestCase):
     """ unit tests for rectangle """
@@ -66,3 +67,10 @@ def test_area(self):
     """ tests the area of rectangle """
     rect = Rectangle(2, 10)
     self.assertEqual(rect.area(), 20)
+
+def test_str(self):
+    """ testing str method """
+    rect = Rectangle(5, 10, 15, 20, 1)
+    expected_str = "[Rectangle] (1) 15/20 - 5/10"
+    self.assertEqual(str(rect), expected_str)
+
