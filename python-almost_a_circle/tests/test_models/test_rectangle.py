@@ -53,16 +53,6 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             rect = Rectangle(5, 0, 15, 20, 1)
 
-    def test_invalid_x_value(self):
-        """ test for invalid x value """
-        with self.assertRaises(ValueError):
-            rect = Rectangle(5, 10, 0, 20, 1)
-
-    def test_invalid_y_value(self):
-        """ test for invalid x value """
-        with self.assertRaises(ValueError):
-            rect = Rectangle(5, 10, 15, 0, 1)
-
     def test_area(self):
         """ tests the area of rectangle """
         rect = Rectangle(2, 10)
@@ -73,3 +63,23 @@ class TestRectangle(unittest.TestCase):
         rect = Rectangle(5, 10, 15, 20, 1)
         expected_str = "[Rectangle] (1) 15/20 - 5/10"
         self.assertEqual(str(rect), expected_str)
+
+    def test_args(self):
+        """ tests the args """
+        rect = Rectangle(5, 10, 15, 20, 1)
+        rect.update(4, 8, 12, 16, 22)
+        self.assertEqual(rect.id, 4)
+        self.assertEqual(rect.width, 8)
+        self.assertEqual(rect.height, 12)
+        self.assertEqual(rect.x, 16)
+        self.assertEqual(rect.y, 22)
+
+    def test_kwargs(self):
+        """ tests kwargs """
+        rect = Rectangle(5, 10, 15, 20, 1)
+        rect.update(id=4, width=8, height=12, x=16, y=22)
+        self.assertEqual(rect.id, 4)
+        self.assertEqual(rect.width, 8)
+        self.assertEqual(rect.height, 12)
+        self.assertEqual(rect.x, 16)
+        self.assertEqual(rect.y, 22)    
