@@ -13,6 +13,7 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """ initalizing the square """
         super().__init__(size, size, x, y, id)
-    
+
     def __str__(self):
-        return f"[square] ({self.id}) {self.x}/{self.y} - {self.width}"
+        """ returns string rep of square """
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
