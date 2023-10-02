@@ -19,17 +19,17 @@ class Base:
             self.id = Base.__nb_objects
 
     @staticmethod
-    def to_json_string(list_dictionaries):
-        """ return json rep of list_dictionaries """
-        if list_dictionaries is None or list_dictionaries == []:
-            return "[]"
-        return json.dumps(list_dictionaries)
+    def from_json_string(json_string):
+        """ return list of dictionaries rep by json_string"""
+        if json_string is None or json_string == "":
+            return []
+        return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):
         """ save json str of list_objs to file """
         filename = cls.__name__ + ".json"
-        json_objects =  [obj.to_dictionary() for obj in list_objs]
+        json_objects = [obj.to_dictionary() for obj in list_objs]
         json_string = cls.to_json_string(json_objects)
 
         with open(filename, "w") as file:

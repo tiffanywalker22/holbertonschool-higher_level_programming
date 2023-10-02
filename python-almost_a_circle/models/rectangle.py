@@ -4,6 +4,10 @@
 """ file for class rectangle """
 
 
+
+import json
+
+
 from models.base import Base
 
 
@@ -123,3 +127,10 @@ class Rectangle(Base):
             'x': self.x,
             'y': self.y
             }
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """ return json rep of list of dictionaries """
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+        return json.dumps(list_dictionaries)
