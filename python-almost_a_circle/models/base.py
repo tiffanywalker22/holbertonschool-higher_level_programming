@@ -38,11 +38,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ return a list of instances """
-        if cls.__name == "Rectangle":
+        if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
-        elif cls.__name == "Square":
+        elif cls.__name__ == "Square":
             dummy = cls(1)
 
         dummy.update(**dictionary)
         return dummy
-
