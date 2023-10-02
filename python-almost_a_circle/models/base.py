@@ -34,3 +34,15 @@ class Base:
 
         with open(filename, "w") as file:
             file.write(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ return a list of instances """
+        if cls.__name == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name == "Square":
+            dummy = cls(1)
+
+        dummy.update(**dictionary)
+        return dummy
+
