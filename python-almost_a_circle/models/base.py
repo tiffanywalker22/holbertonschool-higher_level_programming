@@ -19,6 +19,13 @@ class Base:
             self.id = Base.__nb_objects
 
     @staticmethod
+    def to_json_string(list_dictionaries):
+        """ return json string rep of list of dictionaries """
+        if not list_dictionaries:
+            return "[]"
+        return json.dumps(list_dictionaries)
+
+    @staticmethod
     def from_json_string(json_string):
         """ return list of dictionaries rep by json_string"""
         if json_string is None or json_string == "":
@@ -29,11 +36,13 @@ class Base:
     def save_to_file(cls, list_objs):
         """ save json str of list_objs to file """
         filename = cls.__name__ + ".json"
-        json_objects = [obj.to_dictionary() for obj in list_objs]
-        json_string = cls.to_json_string(json_objects)
-
         with open(filename, "w") as file:
-            file.write(json_string)
+            if list_objs is None:
+                file.write("[]")
+            else:
+                json_objects = [obj.to_dictionary() for obj in list_objs]
+                json_string = cls.to_json_string(json_objects)
+                file.write(json_string)
 
     @classmethod
     def create(cls, **dictionary):
