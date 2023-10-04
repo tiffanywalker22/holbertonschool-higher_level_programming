@@ -4,7 +4,6 @@
 """ file for class rectangle """
 
 
-
 import json
 
 
