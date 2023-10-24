@@ -15,6 +15,6 @@ if __name__ == "__main__":
 
     if states is None:
         print("Nothing")
-    
-    else: 
+
+    else:
         print(f"{states.id}: {states.name}")
