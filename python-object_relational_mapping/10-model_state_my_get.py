@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Script that prints the state object with the name passed as argument 
+""" Script that prints the state object with the name passed as argument
 from database hbtn_0e_6_usa"""
 import sys
 from sqlalchemy import create_engine
@@ -12,10 +12,10 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).order_by(State.name == sys.argv[4]).first()
+    state = session.query(State).filter(State.name == sys.argv[4]).first()
 
     if state is None:
         print("Not found")
-    
+
     else:
         print(f"{state.id}")
