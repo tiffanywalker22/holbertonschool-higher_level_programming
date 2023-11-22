@@ -5,8 +5,7 @@ const ints = parseInt(args[2]);
 if (isNaN(ints)) {
   console.log('Missing number of occurrences');
 } else {
-    for (i = 0; i < ints; i++) {
-    console.log(`C is fun`);
-    }
+  for (let i = 0; i < ints; i++) {
+    console.log('C is fun');
+  }
 }
-
